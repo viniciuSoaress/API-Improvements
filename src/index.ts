@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(cors())
 
 
-app.use('/', routerImpro)
+app.get('/', (req, res) => res.send({message: 'api de melhorias'}))
 app.use('/improvements', routerImpro)
 
 app.listen(port, () => {
